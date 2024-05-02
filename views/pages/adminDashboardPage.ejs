@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link href="/bootstrap/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="/bootstrapicons/bootstrap-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <style>
+    .vendors {
+      margin-left: 10px;
+      height: 120px;
+      gap: 25px;
+    }
+
+    .Dharm {
+      width: 250px;
+    }
+
+    .effect {
+      padding: 12px 15px;
+      transition: 0.19s;
+    }
+
+    .effect:hover {
+      background-color: #fff;
+      border-radius: 7px;
+    }
+
+
+    .ulForSideBar {
+      margin-left: 10px;
+      font-size: large;
+      font-weight: 400;
+    }
+
+    .raw {
+      margin: 0px;
+    }
+
+    .sidebar {
+      width: 255px !important;
+      left: 0px;
+      height: 100%;
+      top: 56px;
+    }
+
+    .right-sidebar {
+      width: 100%;
+      padding-left: 270px;
+      margin-top: 56px;
+    }
+
+    .side-bar-nav {
+      height: calc(100% - 56px);
+    }
+
+    .tabs:hover {
+      color: #fff;
+      transform: scale(1.025);
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid px-0">
+    <%- include('../components/adminDashboardHeader.component.ejs'); %>
+
+      <div class="row raw g-0">
+        <div class=" position-fixed sidebar px-0">
+          <%- include('../components/adminDashboardSidebar.component.ejs'); %>
+        </div>
+        <div class=" right-sidebar ">
+          <div class="row raw mt-4 vendors g-0">
+            <div
+              class="col-2 bg-primary rounded-2 fs-4 d-flex flex-column justify-content-center align-items-center mr-3 tabs">
+              <div>
+                <span>Total Vendors: 50</span>
+              </div>
+            </div>
+
+            <div
+              class="col-2 bg-danger rounded-2 fs-4 d-flex flex-column justify-content-center align-items-center Dharm tabs">
+              <div>
+                <span>Total Customers: 50</span>
+              </div>
+            </div>
+
+            <div
+              class="col-2 bg-warning rounded-2 fs-4 d-flex flex-column justify-content-center align-items-center Dharm tabs">
+              <div>
+                <span>Total Products: 50</span>
+              </div>
+            </div>
+
+            <div
+              class="col-2 bg-info rounded-2 fs-4 d-flex flex-column justify-content-center align-items-center Dharm tabs">
+              <div>
+                <span>Total Customers: 50</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</body>
+
+</html>
